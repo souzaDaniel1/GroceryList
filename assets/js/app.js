@@ -1,9 +1,7 @@
 class App {
 
-
   constructor() {
     this.registerServiceWorker();
-    this.bindFormEvent();
   }
 
   registerServiceWorker() {
@@ -16,15 +14,6 @@ class App {
         .then(onsuccess)
         .catch(onfailure);
     }
-  }
-
-  bindFormEvent() {
-    const form = document.querySelector('form');
-    form.addEventListener('submit', event => {
-      event.preventDefault();
-      console.log(form.item.value);
-      form.reset();
-    });
   }
 }
 
