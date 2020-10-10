@@ -38,6 +38,6 @@ li > button {
   cursor: pointer;
 }
 
-.done {
+.checked {
   background: #a6f59d;
 }

@@ -1,7 +1,16 @@
+import HtmlService from './HtmlService.js';
+import GroceryListService from './GroceryListService.js';
+
 class App {
 
   constructor() {
     this.registerServiceWorker();
+    this.start();
+  }
+
+  start(){
+    const groceryListService = new GroceryListService();
+    new HtmlService(groceryListService);
   }
 
   registerServiceWorker() {
