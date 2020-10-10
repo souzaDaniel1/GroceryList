@@ -25,8 +25,20 @@ export default class GroceryListService {
         });
     }
 
+    save(product) {
+        return db.products.put(product);
+    }
+
     getAll() {
         return db.products.toArray();
+    }
+
+    get(id) {
+        return db.products.get(id);
+    }
+
+    delete(id) {
+        return db.products.delete(id);
     }
 }
 

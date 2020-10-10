@@ -10,7 +10,7 @@ export default class HtmlService {
         const form = document.querySelector('form');
         form.addEventListener('submit', event => {
             event.preventDefault();
-            console.log(form.item.value);
+            this.addItem(form.item.value);
             form.reset();
         })
     }
@@ -20,6 +20,26 @@ export default class HtmlService {
         items.forEach(item => this.addToHtmlList(item));
     }
 
+    async addItem(product){
+        const item = {product, checked: false};
+        const itemId = await this.groceryListService.save(item);
+        item.id = itemId;
+        this.addToHtmlList(item);
+    }
+
+    async saveItem(itemId, isChecked){
+        const item = await this.groceryListService.get(itemId);
+        item.checked = isChecked;
+        this.groceryListService.save(item);
+    }
+
+    toggleItem(li){
+        const itemId = +li.getAttribute('data-item-id');
+        li.classList.toggle('checked');
+        const isChecked = li.classList.contains('checked');
+        this.saveItem(itemId, isChecked);
+    }
+
     addToHtmlList(item){
         const ul = document.querySelector('ul');
         const li = document.createElement('li');
@@ -27,6 +47,8 @@ export default class HtmlService {
         const button = document.createElement('button');
 
         li.setAttribute('data-item-id', item.id);
+        li.addEventListener('click', () => this.toggleItem(li));
+
         span.textContent = item.product;
         button.textContent = 'x';
 
