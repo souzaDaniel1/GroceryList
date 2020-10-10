@@ -6,12 +6,13 @@ const assetsToCache = [
   'https://fonts.googleapis.com/css?family=Roboto:400,700',
   'https://fonts.googleapis.com/icon?family=Material+Icons',
   'https://cdn.jsdelivr.net/npm/dexie@3.0.2/dist/dexie.mjs',
-  'assets/images/pwa-logo.png',
-  'assets/js/material.min.js',
-  'assets/css/style.css',
-  'assets/js/app.js',
-  'index.html',
-  '/'
+  './assets/js/material.min.js',
+  './assets/css/style.css',
+  './assets/js/GroceryListService.js',
+  './assets/js/HtmlService.js',
+  './assets/js/app.js',
+  './index.html',
+  './'
 ];
 
 function removeOldCache(key) {
@@ -63,5 +64,5 @@ async function cacheFirst(request) {
 }
 
 self.addEventListener('fetch', event => {
-  event.respondWith(networkFirst(event.request));
+  event.respondWith(cacheFirst(event.request));
 });

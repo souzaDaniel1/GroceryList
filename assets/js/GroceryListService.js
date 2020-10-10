@@ -5,7 +5,6 @@ let db;
 export default class GroceryListService {
     constructor() {
         this.initializeDB();
-        console.log("Passing here")
     }
 
     initializeDB() {
@@ -14,7 +13,6 @@ export default class GroceryListService {
         db.version(1).stores({
             products: '++id,product,checked'
         });
-        console.log("Passing here1")
         db.on('populate', async () => {
             await db.products.bulkPut([
                 { product: 'Tomatoes', checked: false },
