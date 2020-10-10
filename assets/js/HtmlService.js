@@ -33,6 +33,12 @@ export default class HtmlService {
         this.groceryListService.save(item);
     }
 
+    async deleteTask(li){
+        const itemId = +li.getAttribute('data-item-id');
+        await this.groceryListService.delete(itemId);
+        li.remove();
+    }
+
     toggleItem(li){
         const itemId = +li.getAttribute('data-item-id');
         li.classList.toggle('checked');
@@ -51,6 +57,10 @@ export default class HtmlService {
 
         span.textContent = item.product;
         button.textContent = 'x';
+        button.addEventListener('click', event => {
+            event.stopPropagation();
+            this.deleteTask(li);
+        })
 
         if (item.checked){
             li.classList.add('checked')
