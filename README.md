@@ -1,4 +1,3 @@
-# PWA - Todo List App
+# PWA - GroceryList
 
-An example of PWA with Vanilla JS and IndexedDB
-# GroceryList
+An PWA of Grocery list.
