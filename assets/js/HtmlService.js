@@ -35,10 +35,14 @@ export default class HtmlService {
         this.addToHtmlList(item);
     }
 
-    async deleteTask(li) {
+    async deleteItem(li) {
         const itemId = +li.getAttribute('data-item-id');
         await this.groceryListService.delete(itemId);
         li.remove();
+    }
+
+    deleteAll(){
+        this.groceryListService.deleteAll();
     }
 
     toggleItem(li) {
@@ -60,10 +64,10 @@ export default class HtmlService {
         li.addEventListener('click', () => this.toggleItem(li));
 
         span.textContent = item.product;
-        button.textContent = 'x';
+        button.classList.add('fa', 'fa-trash-o')
         button.addEventListener('click', event => {
             event.stopPropagation();
-            this.deleteTask(li);
+            this.deleteItem(li);
         })
 
         if (item.checked) {

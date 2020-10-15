@@ -38,5 +38,10 @@ export default class GroceryListService {
     delete(id) {
         return db.products.delete(id);
     }
+
+    deleteAll()
+    {
+        return db.products.clear();
+    }
 }
 
