@@ -43,6 +43,7 @@ export default class HtmlService {
 
     deleteAll(){
         this.groceryListService.deleteAll();
+        document.location.reload();
     }
 
     toggleItem(li) {
@@ -59,6 +60,8 @@ export default class HtmlService {
         const li = document.createElement('li');
         const span = document.createElement('span');
         const button = document.createElement('button');
+        const deleteAllBtn = document.getElementById('delete-all');
+        deleteAllBtn.addEventListener('click', () => this.deleteAll());
 
         li.setAttribute('data-item-id', item.id);
         li.addEventListener('click', () => this.toggleItem(li));
