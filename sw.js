@@ -6,6 +6,8 @@ const assetsToCache = [
   'https://fonts.googleapis.com/css?family=Roboto:400,700',
   'https://fonts.googleapis.com/icon?family=Material+Icons',
   'https://cdn.jsdelivr.net/npm/dexie@3.0.2/dist/dexie.mjs',
+  'https://code.getmdl.io/1.3.0/material.amber-orange.min.css',
+  'https://kit.fontawesome.com/a076d05399.js',
   './assets/js/material.min.js',
   './assets/css/style.css',
   './assets/js/GroceryListService.js',
