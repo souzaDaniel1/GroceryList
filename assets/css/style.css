@@ -39,6 +39,10 @@ li > button {
   color: tomato;
 }
 
+.about-text{
+  padding: 50px;
+}
+
 .float{
 	position:fixed;
 	width:60px;

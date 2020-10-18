@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.amber-orange.min.css" />
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="manifest" href="manifest.json">
   <link rel="icon" href="assets/icons/icon-48x48.png" type="imagem/png" />
   <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/icon-180x180.png">
 </head>
@@ -33,21 +32,22 @@
         </nav>
       </div>
       <main class="mdl-layout__content mat-typography" style="text-align: center">
-        <form>
-          <input type="text" name="item" placeholder="Add an item" autofocus="" required="" autocomplete="off">
-        </form>
-        <div class="fixed-action-btn">
-          <a class="float">
-            <i id="delete-all" class="material-icons">delete_forever</i>
-          </a>
+        <div class="about-text">
+            <img src="assets/icons/icon-48x48.png" alt="Grocery List"><br><br>
+            <p>Grocery List is an app to support you in your grocery shopping.</p><br><br>
+            <p>You can add the items by submitting the following field filled:</p><br>
+            <img src="assets/images/form.png" height="100px" ><br><br>
+            <p>You can check the item by touching it (this item will be moved automatically to the end of the list).</p><br>
+            <img src="assets/images/check-item.png" height="100px" ><br><br>
+            <p>You can remove the item by touching the following button:</p>
+            <img src="assets/images/remove-item.png" height="100px" ><br><br>
+            <p>You can clean the list by touching the following button:</p>
+            <img src="assets/images/clean-list.png" height="100px" ><br><br>
+            <h3>Enjoy!</h3>
         </div>
-        <ul id="checked-items"></ul>
-        <ul id="unchecked-items"></ul>
-        
       </main>
     </div>
   </div>
   <script defer src="assets/js/material.min.js"></script>
-  <script type="module" src="assets/js/app.js"></script>
 </body>
 </html>

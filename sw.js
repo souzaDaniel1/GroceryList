@@ -14,8 +14,13 @@ const assetsToCache = [
   './assets/js/HtmlService.js',
   './assets/icons/icon-48x48.png',
   './assets/icons/icon-144x144.png',
+  './assets/images/check-item.png',
+  './assets/images/clean-list.png',
+  './assets/images/form.png',
+  './assets/images/remove-item.png',
   './assets/js/app.js',
   './manifest.json',
+  './about.html',
   './index.html',
   './'
 ];
