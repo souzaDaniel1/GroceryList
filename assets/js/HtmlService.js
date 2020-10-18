@@ -67,7 +67,8 @@ export default class HtmlService {
         li.addEventListener('click', () => this.toggleItem(li));
 
         span.textContent = item.product;
-        button.classList.add('fa', 'fa-trash-o')
+        button.classList.add('material-icons');
+        button.textContent = 'remove_circle';
         button.addEventListener('click', event => {
             event.stopPropagation();
             this.deleteItem(li);

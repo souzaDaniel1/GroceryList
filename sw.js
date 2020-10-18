@@ -1,4 +1,4 @@
-const cacheName = 'app-shell-v2';
+const cacheName = 'app-grocery-list';
 const assetsToCache = [
   'https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.indigo-pink.min.css',
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
@@ -8,12 +8,14 @@ const assetsToCache = [
   'https://fonts.googleapis.com/icon?family=Material+Icons',
   'https://cdn.jsdelivr.net/npm/dexie@3.0.2/dist/dexie.mjs',
   'https://code.getmdl.io/1.3.0/material.amber-orange.min.css',
-  'https://kit.fontawesome.com/a076d05399.js',
   './assets/js/material.min.js',
   './assets/css/style.css',
   './assets/js/GroceryListService.js',
   './assets/js/HtmlService.js',
+  './assets/icons/icon-48x48.png',
+  './assets/icons/icon-144x144.png',
   './assets/js/app.js',
+  './manifest.json',
   './index.html',
   './'
 ];
